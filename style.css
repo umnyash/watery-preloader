@@ -88,3 +88,8 @@
 .animation .dots {
   animation: dots 2.8s infinite;
 }
+
+.animation:hover .dot,
+.animation:hover .dots {
+  animation-play-state: paused;
+}
