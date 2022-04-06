@@ -1,0 +1,90 @@
+:root {
+  --bg-color: white;
+  --dot-color: black;
+}
+
+.preloader {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.gooey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: var(--bg-color);
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: var(--dot-color);
+  border-radius: 50%;
+  transform: translateX(0);
+}
+
+.dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+}
+  
+.dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: var(--dot-color);
+  border-radius: 50%;
+}
+
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  } 
+}
+  
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  } 
+}
+
+.button {
+  display: grid;
+  grid-auto-flow: column;
+  min-height: 23px;
+  column-gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button--checked::after {
+  content: "✓";
+}
+
+.contrast .gooey {
+  filter: contrast(20);
+}
+
+.blur .dot,
+.blur .dots span {
+  filter: blur(4px);
+}
+
+.animation .dot {
+  animation: dot 2.8s infinite;
+}
+
+.animation .dots {
+  animation: dots 2.8s infinite;
+}
