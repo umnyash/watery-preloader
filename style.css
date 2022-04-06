@@ -91,5 +91,10 @@
 
 .animation:hover .dot,
 .animation:hover .dots {
+  animation-duration: 15s;
+}
+
+.animation:active .dot,
+.animation:active .dots {
   animation-play-state: paused;
 }
